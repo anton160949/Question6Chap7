@@ -1,0 +1,42 @@
+https://github.com/anton160949/Question6Chap7/new/master#
+
+/* 2014 population 123.8 million
+ * grows at 0.5% a year
+ * 
+ */
+import java.util.Scanner;
+public class Q6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double pop = 123.8;
+		int counter = 2014;
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Please input a year: ");
+		int i = input.nextInt();
+		
+		if (i < 2014){
+			System.out.println("Year needs to be 2015 or later");
+		}
+		
+		if (i == 2014){
+			System.out.println(pop);
+		}
+		
+		while (i > 2014){
+			counter ++;
+			pop *= 1.005;
+			
+			if (counter == i){
+				break;
+			}
+		}
+		System.out.println("The population in " + i + " is " + pop + " million ");
+	}
+	
+
+	
+
+}
